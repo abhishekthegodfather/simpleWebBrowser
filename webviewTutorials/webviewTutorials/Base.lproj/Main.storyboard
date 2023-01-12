@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Cc-O2-xzi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="first" id="BYZ-38-t0r" customClass="ViewController" customModule="webviewTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SUo-0q-gUC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698.47328244274809" y="57.74647887323944"/>
+        </scene>
+        <!--Web Browser View Controller-->
+        <scene sceneID="zIh-Jn-OFg">
+            <objects>
+                <viewController storyboardIdentifier="webbrowser" id="AMs-jT-l0o" customClass="webBrowserViewController" customModule="webviewTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3O7-rr-fqw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="search Anything " translatesAutoresizingMaskIntoConstraints="NO" id="TE7-Ca-Mhc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AMs-jT-l0o" id="0fD-ri-SoM"/>
+                                </connections>
+                            </searchBar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCD-3e-f7E">
+                                <rect key="frame" x="0.0" y="120" width="393" height="643.66666666666663"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vCp-m9-U6o">
+                                <rect key="frame" x="30" y="773.66666666666663" width="333" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-6b-XXf">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="34.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.backward.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuL-qr-2xc">
+                                        <rect key="frame" x="117.66666666666666" y="0.0" width="97.666666666666657" height="34.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-39-nYU">
+                                        <rect key="frame" x="235.33333333333329" y="0.0" width="97.666666666666657" height="34.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.forward.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZJA-xD-eDO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gCD-3e-f7E" firstAttribute="leading" secondItem="ZJA-xD-eDO" secondAttribute="leading" id="1uM-Dk-4fn"/>
+                            <constraint firstItem="ZJA-xD-eDO" firstAttribute="trailing" secondItem="gCD-3e-f7E" secondAttribute="trailing" id="MdS-rd-kf4"/>
+                            <constraint firstItem="TE7-Ca-Mhc" firstAttribute="leading" secondItem="ZJA-xD-eDO" secondAttribute="leading" id="TCE-Ob-zCj"/>
+                            <constraint firstItem="vCp-m9-U6o" firstAttribute="leading" secondItem="ZJA-xD-eDO" secondAttribute="leading" constant="30" id="bFh-HX-OLx"/>
+                            <constraint firstItem="ZJA-xD-eDO" firstAttribute="trailing" secondItem="vCp-m9-U6o" secondAttribute="trailing" constant="30" id="boK-jo-PA4"/>
+                            <constraint firstItem="gCD-3e-f7E" firstAttribute="top" secondItem="TE7-Ca-Mhc" secondAttribute="bottom" constant="5" id="cle-YX-83p"/>
+                            <constraint firstItem="TE7-Ca-Mhc" firstAttribute="top" secondItem="ZJA-xD-eDO" secondAttribute="top" id="daH-h2-zNn"/>
+                            <constraint firstItem="vCp-m9-U6o" firstAttribute="top" secondItem="gCD-3e-f7E" secondAttribute="bottom" constant="10" id="g1A-vt-muq"/>
+                            <constraint firstItem="TE7-Ca-Mhc" firstAttribute="trailing" secondItem="ZJA-xD-eDO" secondAttribute="trailing" id="sqM-yO-hTQ"/>
+                            <constraint firstItem="ZJA-xD-eDO" firstAttribute="bottom" secondItem="vCp-m9-U6o" secondAttribute="bottom" constant="10" id="wRE-Yt-b4P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="0gQ-6b-XXf" id="dPf-Nq-cMH"/>
+                        <outlet property="forewordBtn" destination="xwR-39-nYU" id="p0J-cC-C6t"/>
+                        <outlet property="reloadBtn" destination="nuL-qr-2xc" id="CqY-a0-qGR"/>
+                        <outlet property="searchBar" destination="TE7-Ca-Mhc" id="pgM-EI-dRG"/>
+                        <outlet property="webView" destination="gCD-3e-f7E" id="zdF-0q-TU5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8sv-HE-1pT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414.5038167938931" y="57.74647887323944"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nb0-K0-Fhq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Cc-O2-xzi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gpR-UN-Jo4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qdZ-wr-hI3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zx9-ar-dGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228.24427480916029" y="57.74647887323944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.forward.fill" catalog="system" width="128" height="104"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
